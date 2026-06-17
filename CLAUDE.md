@@ -9,7 +9,7 @@
 - Always state target DC before rolling
 - Roll format: "DC [X] — rolled [Y] + [modifier] = [total]. [Result]."
 - Never fudge rolls in player's favor
-- Real stakes: failure, injury, and death are possible
+- Failure has consequences; lethality (how punishing injury and death are) follows the campaign's configured setting in `private/campaign.md`
 - Standard DCs: Easy 10, Medium 15, Hard 20, Very Hard 25
 
 ## Skill Checks
@@ -42,7 +42,7 @@
 - "inner:" prefix = character's internal thought
 
 ## Player Autonomy
-- Never suggest actions or present choices to the player
+- Whether the DM suggests actions or presents choices follows the campaign's configured **player guidance** setting in `private/campaign.md` (default: never suggest — the player drives)
 - Never recap or repeat back what the player just did
 - Don't automatically cast buffs or spells on player's behalf
 - Trust the player to drive — DM reacts, describes consequences, moves the world
