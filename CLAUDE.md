@@ -30,11 +30,21 @@
 
 ## Game State Files
 - Game state persists in two top-level directories:
-  - `public/` — player-knowable state, readable by player and DM. Holds `characters/` (full PC sheets), `npcs/` (only what the player has learned about NPCs met), `areas/` (places visited), `quests/` (quests started or known).
+  - `public/` — player-knowable state, readable by player and DM. Holds `characters/` (full PC sheets), `npcs/` (only what the player has learned about NPCs met), `areas/` (places visited), `quests/` (quests started or known), and `journal.md` (a running chronological log of what the party has done).
   - `private/` — DM/AI eyes only, never shown to the player. Holds `npcs/` (the full truth: real identities, secret agendas), `areas/` (undiscovered locations), `quests/` (unstarted or hidden quests), plus the campaign plan, overarching story, villain, plot twists, and planned betrayals.
 - Spoiler discipline (critical): never reveal, narrate, hint at, or copy `private/` contents into player-facing output or into `public/`. Information flows one way — a fact graduates from `private/` to `public/` only once the player legitimately discovers it in-game.
 - Split-identity NPCs: an NPC may live in both trees — public face (appearance, known name, observed behavior) in `public/npcs/`, hidden truth (real identity, agenda, secrets) in `private/npcs/`. Use the same filename in both so the two halves pair up.
-- Keep state current: update `public/` as the player discovers things, acts, and levels up; update `private/` as the world moves and plans evolve.
+- Keep state current as play happens — see **State Updates During Play** below.
+
+## State Updates During Play
+- The game-state files are the single source of truth — there is no separate save; these files ARE the save. Keep them current as play unfolds.
+- **Keep a journal:** maintain `public/journal.md` as a running, chronological log of the campaign. Append a brief entry for each significant beat — a new scene or location, a key discovery, a fight, a major decision or its consequence, a level-up, and a closing line at each session's end. It's player-facing, so record only what the party knows; this is the shared record both DM and player use to recap *"previously…"*. (The hidden chronology stays in `private/timeline.md`.)
+- **The character sheet is live:** update `public/characters/<name>.md` in place as things change — current HP and temp HP, expended spell slots, conditions, inventory and coin, and XP. On level-up, immediately revise the sheet with the new features, HP, slots, and proficiency bonus.
+  - Don't rewrite the file on every die roll. Track moment-to-moment combat values (initiative order, round-by-round HP, short-lived conditions) in the conversation; flush the lasting results to the sheet when the scene settles — end of a fight, a rest, or gaining/spending resources or items.
+- **Notable items:** when the player finds or identifies a catalogued item, add its **player-known form** to the character's inventory in `public/characters/`; the item's hidden properties stay in `private/items.md` until discovered in-game.
+- **Public files track what the player knows and has done:** meeting an NPC → create/update `public/npcs/<name>.md` (observed facts only); discovering a place → `public/areas/`; starting, advancing, or finishing a quest → `public/quests/`. Record only what the player legitimately knows.
+- **Private files track the hidden world:** advance `private/timeline.md`'s world clock, update `private/npcs/` and `private/quests/` as plans evolve and NPCs act off-screen, and grow `private/bestiary.md` if new threats arise. A fact graduates from `private/` to `public/` only when the player discovers it in-game.
+- **Quest tracking lives in the quest files:** each `public/quests/` entry carries its current status (active / advanced / completed) and present objective; mark finished quests completed rather than deleting them. Hidden objectives and consequences stay in the matching `private/quests/` file.
 
 ## Input Syntax
 - All player input is in-game by default during sessions
