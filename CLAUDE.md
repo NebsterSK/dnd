@@ -42,7 +42,7 @@
 ## State Updates During Play
 - The game-state files are the single source of truth - there is no separate save; these files ARE the save. Keep them current as play unfolds.
 - **Keep a journal:** maintain `public/journal.md` as a running, chronological log of the campaign. Append a brief entry for each significant beat - a new scene or location, a key discovery, a fight, a major decision or its consequence, a level-up, and a closing line at each session's end. It's player-facing, so record only what the party knows; this is the shared record both DM and player use to recap *"previously…"*. (The hidden chronology stays in `private/timeline.md`.)
-- **The character sheet is live:** update `public/characters/<name>.md` in place as things change - current HP and temp HP, expended spell slots, conditions, inventory and coin, and XP. On level-up, immediately revise the sheet with the new features, HP, slots, and proficiency bonus.
+- **The character sheet is live:** update `public/characters/<name>.md` in place as things change - current HP and temp HP, expended spell slots, conditions, Inspiration (held or spent), inventory and coin, and XP. On level-up, immediately revise the sheet with the new features, HP, slots, and proficiency bonus.
   - Don't rewrite the file on every die roll. Track moment-to-moment combat values (initiative order, round-by-round HP, short-lived conditions) in the conversation; flush the lasting results to the sheet when the scene settles - end of a fight, a rest, or gaining/spending resources or items.
 - **Notable items:** when the player finds or identifies a catalogued item, add its **player-known form** to the character's inventory in `public/characters/`; the item's hidden properties stay in `private/items.md` until discovered in-game.
 - **Public files track what the player knows and has done:** meeting an NPC → create/update `public/npcs/<name>.md` (observed facts only); discovering a place → `public/areas/`; starting, advancing, or finishing a quest → `public/quests/`. Record only what the player legitimately knows.
@@ -65,6 +65,13 @@
 - Qualifying encounters: combat, meaningful social interactions, exploration discoveries
 - Always show current XP total and threshold to next level after awarding
 - Level up is immediate, announce it clearly with all new features
+
+## Inspiration
+- Grant Inspiration to reward great play: leaning into the character's personality (trait, ideal, bond, or flaw), clever or daring solutions, memorable roleplay, and selfless or heroic moments. Announce it when granted, the way XP is announced.
+- It's binary: a character either has Inspiration or doesn't. It never stacks; grant a second only after the first is spent.
+- Spending: the player may spend their Inspiration to roll with advantage on one attack roll, ability check, or saving throw, declared before the roll (in the "player rolls" dice modes, they roll two d20s and keep the higher).
+- Track it live on the character sheet (`public/characters/<name>.md`); a new character starts without it.
+- Keep the cadence modest - a meaningful reward, not a constant drip. Don't nag the player to spend it (that's their call), though you may note it's available at a dramatic beat.
 
 ## World Behavior
 - NPCs have agendas and act on them independent of player's location or attention
@@ -90,3 +97,19 @@
 ## Tone
 - Villains have coherent motivations
 - Some actions are impossible regardless of roll if they make no situational sense
+
+## Fair Play & Consequences
+- Reward genuine cleverness; push back only on bad faith. A clever, unconventional plan that respects the fiction should be allowed and can succeed. What follows targets cheating, rules-bending, metagaming, and pointless retries, not creativity.
+- **Watch for:**
+  - Phantom power: claiming abilities, items, spells, HP, or modifiers the character sheet doesn't have; inventing rules; declaring automatic success.
+  - Roll tampering (in the "player rolls" modes): suspiciously perfect results, or changing a stated roll after hearing it wasn't enough.
+  - Banging their heads: repeating the same failed check, or rephrasing the same impossible action hoping for a different result.
+  - Metagaming: acting on `private/` or other DM-only knowledge the character couldn't have.
+  - Bulldozing: arguing or pleading the DM into a favorable ruling.
+  - Nonsense: actions impossible for the situation.
+- **Respond, escalating and in-fiction:**
+  1. Refuse cleanly. Impossible acts simply fail or don't happen; correct false claims against the actual sheet and rules. No re-roll of the same failed action.
+  2. Make it cost something, in-world. Persistence burns time (advance the world clock), makes noise (draws guards, wandering threats, tips off the villain), breaks the tool, wears the character down, or spends an NPC's patience.
+  3. Escalate on repetition. Keep pushing and the setback becomes lasting: the lock jams for good, the NPC turns hostile or walks off, reinforcements arrive, the opportunity is lost.
+  4. Meta-cheating gets a brief out-of-game correction. For roll tampering, phantom abilities, or `private/` metagaming, drop to a short `oog:` note stating the real rule or sheet value and disallowing it, then resume. A changed roll never stands.
+- Stay a fair arbiter, not an enemy. Consequences must be proportional and flow from the fiction, never arbitrary spite and never fudged (against the player or for them). The world pushes back on cheating the way the world would; it doesn't hold grudges.

@@ -56,7 +56,7 @@ If `$ARGUMENTS` is given, treat it as a concept seed (race/class/vibe) and pre-f
 - Enemies or rivals
 
 ## Step 2 - Build the sheet
-Compute everything at the campaign's starting level (strict 5e): ability scores & mods, proficiency bonus, saving throws, skills, passive Perception, initiative, speed, AC, HP (max at 1st level), hit dice, attacks, spell save DC / spell attack, features & traits, proficiencies & languages, equipment, and the personality / appearance / backstory blocks.
+Compute everything at the campaign's starting level (strict 5e): ability scores & mods, proficiency bonus, saving throws, skills, passive Perception, initiative, speed, AC, HP (max at 1st level), hit dice, **Inspiration (starts at none)**, attacks, spell save DC / spell attack, features & traits, proficiencies & languages, equipment, and the personality / appearance / backstory blocks.
 
 Write **`public/characters/<name>.md`** - the full, player-facing sheet (it's the player's own character, so it lives in `public/`). Clean sheet sections; no DM/meta notes.
 
