@@ -41,7 +41,7 @@ For every AskUserQuestion question marked **[optional]**, include **"Let the DM 
 **Batch 3 - Tone & stakes**
 9. **[core] Tone** - Heroic & hopeful / Gritty & dark / Comedic & light / Morally gray
 10. **[core] Lethality** - Forgiving (death rare) / Standard / Deadly (enemies play to kill, harsh consequences) / Brutal (meatgrinder - TPK is on the table)
-11. **[optional] Character death** - Permadeath (death can end the campaign) / Second chances (rescue, resurrection, or a new character keeps the story going) / Narrative saves (death only when story-fitting)
+11. **[optional] Character death** - how dying and death saves play out: Permadeath (death saves run straight; a lost character can end the campaign) / Second chances (a downed character is captured, rescued, or revived rather than truly lost, and a new character can step in) / Narrative saves (death saves are soft; a character dies only when it's dramatically fitting). Governs how strictly the death-save rules in CLAUDE.md apply.
 12. **[optional] Anything off-limits?** - Ask plainly whether there's anything the player wants kept out of the game or handled off-screen. Options: Nothing - anything goes / Keep dark or graphic moments off-screen (fade to black) / There are specific things to avoid *(name them via Other)*
 
 **Batch 4 - Story & secrets**
